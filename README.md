@@ -53,7 +53,7 @@ No exemplo abaixo receberá no email: ```https://www.google.com/{{ token }}```
 
 ## Success Responses
 
-**Condition** : Não existe main_adm no banco de dados
+**Condition** : O email fornecido ainda não está cadastrado no data base.
 
 **Code** : `201 OK`
 
