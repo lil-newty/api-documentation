@@ -1,14 +1,12 @@
-# api-documentation
-# Show Accessible Accounts
+# Cria Admin de Principal
 
-Show all Accounts the active User can access and with what permission level.
-Includes their own Account if they have one.
+É uma request que só deve ser feita em caso em que o banco de dados está vazio.
 
-**URL** : `/api/accounts/`
+**URL** : `/admin/cadastro/debug/`
 
-**Method** : `GET`
+**Method** : `POST`
 
-**Auth required** : YES
+**Auth required** : NO
 
 **Permissions required** : None
 
@@ -16,49 +14,16 @@ Includes their own Account if they have one.
 
 ## Success Responses
 
-**Condition** : User can not see any Accounts.
+**Condition** : Não existe main_adm no banco de dados
 
-**Code** : `200 OK`
+**Code** : `201 OK`
 
-**Content** : `{[]}`
-
-### OR
-
-**Condition** : User can see one or more Accounts.
-
-**Code** : `200 OK`
-
-**Content** : In this example, the User can see three Accounts as AccountAdmin
-`AA`, Viewer `VV`, and Owner `OO` - in that order:
+**Content** : 
 
 ```json
-[
-    {
-        "account": {
-            "id": 123,
-            "name": "Lots of Admins Project",
-            "enterprise": false,
-            "url": "http://testserver/api/accounts/123/"
-        },
-        "permission": "AA"
-    },
-    {
-        "account": {
-            "id": 234,
-            "name": "Feel free to View this",
-            "enterprise": false,
-            "url": "http://testserver/api/accounts/234/"
-        },
-        "permission": "VV"
-    },
-    {
-        "account": {
-            "id": 345,
-            "name": "Mr Owner Project",
-            "enterprise": false,
-            "url": "http://testserver/api/accounts/345/"
-        },
-        "permission": "OO"
-    }
-]
+{
+  "id": 12,
+  "nome": "main_adm",
+  "email": "igor.holanda.main@gmail.com"
+}
 ```
