@@ -43,7 +43,7 @@ No email ele receberá:
 
 **{{ link }}/{{ token }}/**
 
-No exemplo abaixo https://www.google.com/{{ token }}
+No exemplo abaixo **https://www.google.com/{{ token }}**
 
 **Method** : `POST`
 
