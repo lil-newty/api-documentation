@@ -1,4 +1,4 @@
-# Cria Admin de Principal
+# Cria Primeiro Admin
 
 É uma request que só precisa ser feita em caso em que o banco de dados está vazio ou em que o main_adm foi apagado.
 
@@ -10,7 +10,40 @@
 
 **Permissions required** : None
 
-**Data constraints** : `{}`
+## Success Responses
+
+**Condition** : Não existe main_adm no banco de dados
+
+**Code** : `201 OK`
+
+**Response** : 
+
+```json
+{
+  "id": 12,
+  "nome": "main_adm",
+  "email": "igor.holanda.main@gmail.com"
+}
+```
+---
+# Cria Admin Novo Admin
+
+Essa request envia um email para o novo admin e instancia ele no data base com o campo ativo = False e sem hash de senha.
+
+**URL** : `/admin/cadastrar/{{ token }}/`
+
+| Campo           | Tipo                                 |
+| --------------- | ------------------------------------ |
+| **nome**        | string(required)                     |
+| **email**       | string(required)                     |
+| **link**        | string(required)                     |
+
+
+**Method** : `POST`
+
+**Auth required** : YES
+
+**Fresh Token required** : YES
 
 ## Success Responses
 
@@ -18,12 +51,22 @@
 
 **Code** : `201 OK`
 
-**Content** : 
+**Example Body**:
 
 ```json
 {
-  "id": 12,
-  "nome": "main_adm",
-  "email": "igor.holanda.main@gmail.com"
+	"nome":"Igor",
+	"email":"igor.pereira@poli.ufrj.br",
+	"link" : "https://www.google.com/"
+}
+```
+
+**Response** : 
+
+```json
+{
+  "id": 9,
+  "nome": "Igor",
+  "email": "igor.pereira@poli.ufrj.br"
 }
 ```
