@@ -1,6 +1,6 @@
 # Cria Admin de Principal
 
-É uma request que só deve ser feita em caso em que o banco de dados está vazio.
+É uma request que só precisa ser feita em caso em que o banco de dados está vazio ou em que o main_adm foi apagado.
 
 **URL** : `/admin/cadastro/debug/`
 
