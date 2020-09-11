@@ -26,7 +26,7 @@
 }
 ```
 ---
-# Cria Admin Novo Admin
+# Cria Novo Admin
 
 Essa request envia um email para o novo admin e instancia ele no data base com o campo ativo = False e sem hash de senha.
 
