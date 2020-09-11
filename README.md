@@ -39,7 +39,8 @@ Essa request envia um email para o novo admin e instancia ele no data base com o
 | **link**        | string(required)                     |
 
 O link é referente a url base da págiana que o admin definirá sua senha e confirmará o seu cadastro.
-No email ele receberá: **{{ link }}/{{ token }}/**
+No email ele receberá: 
+**{{ link }}/{{ token }}/**
 
 **Method** : `POST`
 
